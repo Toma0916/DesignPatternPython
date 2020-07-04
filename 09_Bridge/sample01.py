@@ -81,8 +81,10 @@ class StringDisplayImpl(DisplayImpl):
         print('+')
 
 if __name__ == '__main__':
-    d1 = Display('Hello')
-    d2 = CountDisplay('Japan')
-
+    d1 = Display(StringDisplayImpl('Japan'))
+    d2 = CountDisplay(StringDisplayImpl('Asia'))
+    d3 = CountDisplay(StringDisplayImpl('Universe'))
+    
     d1.display()
     d2.display()
+    d3.multiple_display(3)
