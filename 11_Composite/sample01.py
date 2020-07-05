@@ -51,8 +51,8 @@ class Directory(Entry):
     
     def get_size(self) -> int:
         size = 0
-        for entry in self.__directory:
-            size +- entry.get_size()
+        for entry in self.__directories:
+            size += entry.get_size()
         return size
     
     def add(self, entry: 'Entry'):
@@ -79,3 +79,4 @@ if __name__ == '__main__':
     bindir.add(File('vi', 10000))
     bindir.add(File('latex', 20000))
     rootdir.print_list()
+    print(rootdir.get_size())
