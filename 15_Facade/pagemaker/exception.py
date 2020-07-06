@@ -1,0 +1,3 @@
+
+class CannotInitializeError(Exception):
+    pass
